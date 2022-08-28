@@ -14,7 +14,7 @@ h1,h3{
 
 .weather-app{
     min-height: 100vh;
-    background-image: url(./photos/day/1.jpg);
+    background-image: url(./photos/day/cloudy.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -91,6 +91,18 @@ h1,h3{
     overflow-y: scroll;
 }
 
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 8px 14px 8px 14px;
+}
+
+.close:hover {
+    background-color: #f44336;
+    color: white;
+}
+
 .panel form{
     margin-bottom: 3em;
 }
@@ -131,4 +143,55 @@ h1,h3{
 
 .search::placeholder{
     color: #ccc;
+}
+
+.panel ul{
+    padding: 0em 0em 1em 0em;
+    margin: 2em 0;
+    border-bottom: 1px #ccc solid;
+}
+
+.panel ul li {
+    color: #ccc;
+    margin: 2.5em 0;
+}
+
+.panel ul h4 {
+    margin: 3em 0;
+}
+
+.city {
+    display: block;
+    cursor: pointer;
+}
+
+.city:hover {
+    color: #fff;
+}
+
+.details li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* responsive */
+
+@media screen and (max-width: 800px) {
+    .panel, .container {
+        position: relative;
+        width: 100%;
+        top: initial;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-style: 12px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .weather-app {
+        min-height: 40em;
+    }
 }
